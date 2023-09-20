@@ -1,19 +1,21 @@
 import React from 'react'
 import PersonalEdit from './Editor/PersonalEdit'
+import ExperienceEdit from './Editor/ExperienceEdit'
+import EducationEdit from './Editor/EducationEdit'
 
 const Home = () => {
   return (
-    <div className='flex flex-row'>
+    <div className='flex container flex-row'>
     <div className='flex flex-col'>
         {/* Editor section */}
         <div>
             <PersonalEdit />
         </div>
         <div>
-            {/* Education */}
+            <EducationEdit />
         </div>
         <div>
-            {/* Experience */}
+            <ExperienceEdit />
         </div>
     </div>
     <div>
