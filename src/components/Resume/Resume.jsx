@@ -3,10 +3,10 @@ import React from 'react';
 
 function Resume() {
   return (
-    <div className="w-595 h-1/2 m-20 border-2 bg-white p-10 shadow-lg">
-
-      
-    </div>
+    <div class=" bg-white p-10 w-full h-full box-border shadow-lg">
+  Hello
+  </div>
+  
   );
 }
 
