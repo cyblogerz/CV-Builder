@@ -4,6 +4,7 @@ import ExperienceEdit from './Editor/ExperienceEdit'
 import EducationEdit from './Editor/EducationEdit'
 import Resume from './Resume/Resume'
 import details from '../resumeDetails'
+import SideBar from './SideBar/SideBar'
 
 const Home = () => {
     const [detail,setDetail] = useState(details)
@@ -35,12 +36,7 @@ const Home = () => {
       <Resume detail={detail}/>
   
   </div>
-  <div className=' w-full flex-1 flex-col'>
-  <div></div>
-  <div></div>
-  <div></div>
-
-  </div>
+  <SideBar />
     
 
     </div>
