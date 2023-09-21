@@ -1,36 +1,67 @@
-import React from 'react'
+import React, { useState , useEffect} from 'react'
+import FInput from '../UI/Form/FInput'
 
-const PersonalEdit = () => {
+const PersonalEdit = (props) => {
+  const [pdetails,setPdetails] = useState({
+    name : '',
+    email : '',
+    phone : '',
+    address: ""
+  })
+
+  const ChangeHandler = (event) =>{
+    const {name,value} = event.target
+    setPdetails(
+      (prevState) => {
+        return {...prevState , [name]:value}
+      }
+    )
+  }
+
+  useEffect(() => {
+    props.onvalChange(pdetails);
+  }, [pdetails]);
+
+
   return (
-    <div className="max-w-sm rounded-lg  my-4 overflow-hidden shadow-lg">
+    <div className="max-w-sm rounded-lg  my-4 overflow-hidden border shadow-lg">
   
   <div className="px-6 py-4">
-    <div className="font-bold text-xl mb-2">Personal Details</div>
+    <div className="font-bold text-xl mb-2 ">Personal Details</div>
     <div class="mt-8 max-w-md">
             <div class="grid grid-cols-1 gap-6">
               <label class="block">
                 <span class="text-gray-700">Full name</span>
-                <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="" />
+                <FInput type={'text'} handler={ChangeHandler} holder={""} name="name"/>
               </label>
               <label class="block">
                 <span class="text-gray-700">Email address</span>
-                <input type="email" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="john@example.com" />
+                <FInput type='email'
+                handler={ChangeHandler}
+                name="email"
+                holder="john@example.com"
+                />
               </label>
               <label class="block">
                 <span class="text-gray-700">Phone number</span>
-                <input type="tel" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Enter your number" />
+                <FInput type='tel'
+                handler={ChangeHandler}
+                name="phone"
+                holder="Enter your number"
+                />
               </label>
               <label class="block">
                 <span class="text-gray-700">Address</span>
-                <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="" />
+                <FInput type='text'
+                handler={ChangeHandler}
+                name="address"
+                holder=""
+                />
               </label>
             </div>
           </div>
   </div>
-  <div className="px-6 py-4">
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Tag1</span>
-    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#Tag2</span>
-  </div>
+  
 </div>
 
   )

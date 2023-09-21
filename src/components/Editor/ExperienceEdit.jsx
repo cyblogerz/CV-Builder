@@ -2,7 +2,7 @@ import React from 'react'
 
 const ExperienceEdit = () => {
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg">
+    <div className="max-w-sm rounded-lg overflow-hidden border my-4 shadow-lg">
   
     <div className="px-6 py-4">
       <div className="font-bold text-xl mb-2">Experience</div>
