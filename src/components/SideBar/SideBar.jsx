@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaDownload } from 'react-icons/fa';
 import {BsShare} from 'react-icons/bs';
+import LayoutSection from './LayoutSection';
 
 const SideBar = () => {
   return (
@@ -18,12 +19,7 @@ const SideBar = () => {
         <p className='ml-2'>Share</p>
     </div>
     </button>
-    <div className="max-w-sm rounded-lg overflow-hidden border shadow-lg mt-4">
-        <div className="px-6 py-4">
-            <h1 className='text-xl font-bold'>Layout</h1>
-            <div className="flex flex-row"></div>
-        </div>
-    </div>
+    <LayoutSection />
     <div></div>
   
     </div>
