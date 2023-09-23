@@ -24,7 +24,7 @@ function Resume(props) {
       <h2 className="text-lg font-semibold mb-2">Contact</h2>
       <p>Email: {details.personalDetails.email}</p>
       <p>Phone: {details.personalDetails.phone}</p>
-      <p>LinkedIn: linkedin.com/in/yourprofile</p>
+      <p>LinkedIn: {details.personalDetails.linkedin}</p>
     </div>
   </div>
 

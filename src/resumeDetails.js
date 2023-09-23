@@ -2,7 +2,7 @@ const details =  {
    personalDetails : { name : 'Pranav Ajay',
     email :'',
     phone : '',
-    address: ""
+    linkedin: ""
 }, 
 education : [{
     school : " ",

@@ -51,10 +51,10 @@ const PersonalEdit = (props) => {
                 />
               </label>
               <label class="block">
-                <span class="text-gray-700">Address</span>
+                <span class="text-gray-700">Linkedin</span>
                 <FInput type='text'
                 handler={ChangeHandler}
-                name="address"
+                name="linkedin"
                 holder=""
                 />
               </label>
