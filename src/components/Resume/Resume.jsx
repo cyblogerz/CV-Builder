@@ -9,7 +9,7 @@ function Resume(props) {
 
 
   return (
-    <div class=" bg-white p-0 w-full h-full box-border shadow-lg">
+    <div ref={props.tref} class=" bg-white p-0 w-full h-full box-border shadow-lg">
  <div className="grid grid-cols-12 gap-4 h-full ">
   {/* Left Sidebar */}
   <div className="col-span-4 bg-gray-200 p-4">

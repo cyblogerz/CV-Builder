@@ -5,8 +5,10 @@ import EducationEdit from './Editor/EducationEdit'
 import Resume from './Resume/Resume'
 import details from '../resumeDetails'
 import SideBar from './SideBar/SideBar'
+import { usePDF } from 'react-to-pdf';
 
 const Home = () => {
+    const { toPDF, targetRef } = usePDF({filename: 'page.pdf'});
     const [detail,setDetail] = useState(details)
     const pvalChangeHandler = (val) =>{
         console.log(val)
@@ -33,10 +35,10 @@ const Home = () => {
     <div className='w-1/2 min-h-screen m-8 border'>
     {/* Set the Resume div to A4 size */}
    
-      <Resume detail={detail}/>
+      <Resume detail={detail} tref={targetRef}/>
   
   </div>
-  <SideBar />
+  <SideBar onDownload={()=> toPDF()} />
     
 
     </div>

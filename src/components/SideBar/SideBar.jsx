@@ -3,7 +3,7 @@ import { FaDownload } from 'react-icons/fa';
 import {BsShare} from 'react-icons/bs';
 import LayoutSection from './LayoutSection';
 
-const SideBar = () => {
+const SideBar = (props) => {
   return (
     <div className=' w-full flex-1 flex-col mt-8 mr-6'>
     <button class="px-4 py-2 font-semibold text-sm text-white 
@@ -13,7 +13,7 @@ const SideBar = () => {
      ">
     <div className="flex flex-row items-center">
         <FaDownload />
-        <p className='ml-2'>Download now</p>
+        <p className='ml-2' onClick={props.onDownload}>Download now</p>
     </div>
     
     </button>
